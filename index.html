@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RECAPIFY</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <center><h1>RECAPIFY</h1></center>
+    <form id="video_form" method="POST" action="/">
+        <label for="video_url">Enter YouTube video URL:</label>
+        <input type="text" id="video_url" name="url">
+        <button type="submit">Recapify</button>
+    </form>
+    <div id="summary">
+        {% if summary %}
+            <p>{{ summary }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
